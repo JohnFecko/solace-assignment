@@ -15,12 +15,13 @@ class AdvocateService {
         if (searchTerm.trim() === "") {
             return true;
         }
+        searchTerm = searchTerm.toLowerCase();
         return (
-            advocate.firstName.includes(searchTerm) ||
-            advocate.lastName.includes(searchTerm) ||
-            advocate.city.includes(searchTerm) ||
-            advocate.degree.includes(searchTerm) ||
-            advocate.specialties.includes(searchTerm) ||
+            advocate.firstName.toLowerCase().includes(searchTerm) ||
+            advocate.lastName.toLowerCase().includes(searchTerm) ||
+            advocate.city.toLowerCase().includes(searchTerm) ||
+            advocate.degree.toLowerCase().includes(searchTerm) ||
+            advocate.specialties.filter(x => x.toLowerCase().includes(searchTerm)).length > 0 ||
             advocate.yearsOfExperience?.toString().includes(searchTerm)
         );
     }
