@@ -1,0 +1,3 @@
+interface FormattedPhoneNumberProps {
+    phoneNumber: number;
+}
