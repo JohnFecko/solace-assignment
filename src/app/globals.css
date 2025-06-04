@@ -1,3 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+    font-family: Solace;
+    src: url(https://cdn.prod.website-files.com/632a21d0ec93a082b11988a0/632a228d46ee0a09a1c1b2a1_Mollie%20Glaston.woff2)format("woff2");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap
+}
